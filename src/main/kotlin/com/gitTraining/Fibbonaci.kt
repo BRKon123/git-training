@@ -45,3 +45,12 @@ fun recursiveFibbonachi(initialPosition: Int, left: Int = 0, right: Int = 1, pos
         return recursiveFibbonachi(initialPosition, right - left, left, position + 1)
     }
 }
+
+fun computeFibbonachiArray(start: Int, end: Int, efficient: Boolean = false): List<Int> {
+    if (!efficient) return (start..end).map { computeFibbonaciNumber(it) }
+    if (start > end) return listOf()
+    if (start == end) return listOf(computeFibbonaciNumber(start))
+    val output = mutableListOf(computeFibbonaciNumber(start), computeFibbonaciNumber(start + 1))
+    (2..(end-start)).forEach { output.add(output[it-2] + output[it-1]) }
+    return output
+}
