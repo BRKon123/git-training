@@ -12,9 +12,6 @@ fun computeFibbonaciNumber(position: Int?, recursion: Boolean = false): Int {
         return computeNegativeFibbonachi(notNullPosition)
     }
 
-    var i = 1
-    var j = 1
-
     if (notNullPosition == 1 || notNullPosition == 2) return 1
 
     var smallFibbonachiNumber = 1
