@@ -26,6 +26,8 @@ fun computeFibbonaciNumber(position: Int?, recursion: Boolean = false): Int {
     return largeFibbonachiNumber
 }
 
+
+
 fun computeNegativeFibbonachi(position:Int): Int {
     if (position >= 0) throw Exception("potition must be smaller than zero!")
     val resultIsNegative = position % 2 == 0
